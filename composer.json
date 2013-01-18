@@ -1,0 +1,13 @@
+{
+    "require": {
+        "silex/silex": "1.0.*"
+    },
+
+    "minimum-stability": "dev",
+
+    "autoload": {
+        "psr-0": {
+            "Trichechus\\Manatus": "library/"
+        }
+    }
+}
