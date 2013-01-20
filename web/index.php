@@ -23,6 +23,8 @@ $app['manatizer'] = $app->share(function (Application $app) {
 
 $app->get('/', function(Application $app) {
     $response = $app->render('index.html.twig');
+    $response->setPublic();
+    $response->setExpires(new DateTime('+1 hours'));
     return $response;
 });
 
