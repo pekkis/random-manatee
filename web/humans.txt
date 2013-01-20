@@ -1,0 +1,21 @@
+/* TEAM */
+
+Everything: Mikko "Pekkis" Forsström
+Contact: pekkisx [at] gmail.com
+Twitter: @pekkisx
+From: Vantaa, Finland
+
+/* THANKS */
+
+Petri "Larva" Koivula
+Twitter: @PKJedi
+From: Espoo, Finland
+
+Markku Marjoneva
+From: Helsinki, Finland
+
+/* SITE */
+
+Language: English
+Doctype: HTML5
+Tech: Nginx, PHP, Silex, Twitter Bootstrap

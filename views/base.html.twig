@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Place a manatee</title>
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap-combined.min.css" rel="stylesheet">
+    <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/js/bootstrap.min.js"></script>
+    <link href="/favicon.png" rel="icon" type="image/png" />
+    <style type="text/css">
+
+        div.container {
+            margin-top: 1em;
+        }
+
+        section {
+            margin: 1em 0;
+        }
+
+        footer {
+            border-top: 1px solid #eee;
+            padding: 0.33em;
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <h1 class="page-header">Place a manatee <small>Your friendly manatee placeholder service</small></h1>
+
+    {% block content %}
+    {% endblock %}
+
+    <footer>
+        Service provided as-is by <a href="mailto:pekkisx@gmail.com">Mikko Forsström</a>.
+    </footer>
+
+
+</div>
+
+</body>
+</html>

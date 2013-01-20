@@ -1,0 +1,88 @@
+{% extends "base.html.twig" %}
+
+{% block content %}
+
+    <section class="row">
+
+        <div class="span6">
+
+            <p>
+                Tired of those goddamn thrice-cursed <a href="http://placekitten.com">placeholder kittens</a>?
+            </p>
+
+            <p>
+                <strong>Place a manatee</strong> is a hardcore service for getting pictures of mighty manatees
+                for use as placeholders in your designs or code. Just put your image size (width & height) and
+                format (jpg) after our URL and you'll get a placeholder.
+            </p>
+
+            <p>
+                <strong>Like this:</strong> http://place.manatee.lc/200/300.jpg<br />
+                <strong>or like this:</strong> https://place.manatee.lc/200/300.jpg
+            </p>
+
+            <p>
+                <span class="label label-info">Make your life easier!</span>
+                Just use <strong>//place.manatee.lc/200/300.jpg</strong> and the manatee placeholder images will
+                just work&trade; with both unsecured and secured connections without any nagging from the browsers.
+            </p>
+
+            <p>
+                <span class="label label-important">Harness the full power of the manatee!</span>
+                You can fine-tune your placeholders and request a specific manatee with the format
+                <strong>//place.manatee.lc/1/200/300.jpg</strong> where "1" is the number of the specific
+                manatee!
+            </p>
+
+
+        </div>
+
+        <div class="span6">
+
+            <div class="thumbnail">
+                <img src="/560/295.jpg" />
+            </div>
+        </div>
+
+    </section>
+
+    <section id="thumbnails">
+
+        <ul class="thumbnails">
+            <li class="span4">
+                <div class="thumbnail">
+                    <img src="/360/270.jpg" />
+                </div>
+            </li>
+            <li class="span3">
+                <div class="thumbnail">
+                    <img src="/260/120.jpg" />
+                </div>
+            </li>
+            <li class="span2">
+                <div class="thumbnail">
+                    <img src="/160/120.jpg" />
+                </div>
+            </li>
+            <li class="span3">
+                <div class="thumbnail">
+                    <img src="/260/120.jpg" />
+                </div>
+            </li>
+            <li class="span2">
+                <div class="thumbnail">
+                    <img src="/160/120.jpg" />
+                </div>
+            </li>
+
+            <li class="span6">
+                <div class="thumbnail">
+                    <img src="/560/120.jpg" />
+                </div>
+            </li>
+
+        </ul>
+
+    </section>
+
+{% endblock %}
