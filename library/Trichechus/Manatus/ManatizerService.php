@@ -27,6 +27,7 @@ class ManatizerService
             }
         }
 
+        sort($manatees);
         return $manatees;
     }
 
@@ -55,7 +56,7 @@ class ManatizerService
         $imagick = new Imagick($manatee);
         $imagick->cropThumbnailimage($request->getWidth(), $request->getHeight());
         $imagick->setImageFormat("jpeg");
-        $imagick->setImageCompressionQuality(50);
+        $imagick->setImageCompressionQuality(75);
         return $imagick;
     }
 
