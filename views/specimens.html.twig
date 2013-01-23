@@ -1,0 +1,31 @@
+{% extends "base.html.twig" %}
+
+{% block content %}
+
+    <h2>Specimens</h2>
+
+    <p>
+        These are our resident manatees. Aren't they adorable?
+    </p>
+
+    <p>
+
+    </p>
+
+
+    <section id="thumbnails">
+        <ul class="thumbnails">
+        {% for manatee in manatees %}
+            <li class="span4">
+                <div class="thumbnail">
+                    <img src="/{{ loop.index }}/360/270.jpg" />
+                    <div class="caption">
+                        Specimen #{{ loop.index }}
+                    </div>
+                </div>
+            </li>
+        {% endfor %}
+        </ul>
+    </section>
+
+{% endblock %}

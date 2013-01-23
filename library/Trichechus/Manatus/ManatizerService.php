@@ -16,7 +16,7 @@ class ManatizerService
         $this->writePath = $writePath;
     }
 
-    private function getManatees()
+    public function getManatees()
     {
         $manatees = [];
         $iter = new DirectoryIterator($this->manateePath);

@@ -22,16 +22,37 @@ $app['manatizer'] = $app->share(function (Application $app) {
 });
 
 $app->get('/', function(Application $app) {
-    $response = $app->render('index.html.twig');
+
+    $manatizerService = $app['manatizer'];
+    $response = $app->render(
+        'index.html.twig',
+        [
+            'manatees' => $manatizerService->getManatees()
+        ]
+    );
     $response->setPublic();
     $response->setExpires(new DateTime('+1 hours'));
     return $response;
 });
 
+$app->get('/specimens', function(Application $app) {
+
+    $manatizerService = $app['manatizer'];
+    $response = $app->render(
+        'specimens.html.twig',
+        [
+            'manatees' => $manatizerService->getManatees()
+        ]
+    );
+    $response->setPublic();
+    $response->setExpires(new DateTime('+1 hours'));
+    return $response;
+
+});
 
 $app->get('/{width}/{height}.jpg', function (Application $app, Request $request, $width, $height) {
 
-    if ($width < 50 || $height < 50) {
+    if ($width < 16 || $height < 16) {
         throw new \InvalidArgumentException('Can not serve a manatee so small, sorry', 500);
     }
 
@@ -60,7 +81,7 @@ $app->get('/{width}/{height}.jpg', function (Application $app, Request $request,
 
 $app->get('/{specificManatee}/{width}/{height}.jpg', function (Application $app, Request $request, $width, $height, $specificManatee) {
 
-    if ($width < 50 || $height < 50) {
+    if ($width < 16 || $height < 16) {
         throw new \InvalidArgumentException('Can not serve a manatee so small, sorry', 500);
     }
 
