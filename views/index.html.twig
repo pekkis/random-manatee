@@ -31,7 +31,7 @@
                 <span class="label label-important">Harness the full power of the manatee!</span>
                 You can fine-tune your placeholders and request a specific manatee with the format
                 <strong>//place.manatee.lc/x/200/300.jpg</strong> where "x" is the number of your favorite
-                <a href="/specimens">specimen(s)</a>. Numbers 1-{{ manatees|length }} are valid.
+                <a href="/specimens">specimen(s)</a>. Numbers 1-{{ realManatees|length }} are valid.
             </p>
 
             <p>
@@ -88,6 +88,53 @@
             </li>
 
         </ul>
+    </section>
+
+    <br>
+    <section class="row">
+
+        <div class="span6">
+
+            <h2>
+                Manatees goes vector art!
+            </h2>
+
+            <p>
+                There is now new option to request some hand made vector "manatees" trough this service.
+                Requesting vector art is as easy as requesting original photorealistic specimens.
+                Only thing that you must change is the format in your URL and you are good to go.
+            </p>
+
+            <p>
+                <strong>Like this:</strong> http://place.manatee.lc/200/300.svg<br />
+                <strong>or like this:</strong> https://place.manatee.lc/200/300.svg
+            </p>
+
+            <p>
+                You can request a specific manatee with the format
+                <strong>//place.manatee.lc/x/200/300.svg</strong> where "x" is the number of your favorite
+                <a href="/specimens">specimen(s)</a>. Numbers 1-{{ svgManatees|length }} are valid.
+            </p>
+
+            <p>
+                <span class="label label-important">Content warning!</span>
+                Our vector art is bit "different" what you might expect. Our art is practiced by programmers who
+                doesn't have any real talent of drawing anything but diagrams.
+            </p>
+
+            <p>
+                <span class="label label-warning">Warning!</span>
+                While our vectorized manatees are not vulnerable to extinction the Vector and rest of his photorealistic
+                comrades are. <a href="http://www.savethemanatee.org/aa_mortality_10-13.html">2013 was the deadliest year ever for florida's manatees.</a>
+            </p>
+        </div>
+
+        <div class="span6">
+
+            <div class="thumbnail">
+                <img src="/5/560/345.svg" />
+            </div>
+        </div>
 
     </section>
 

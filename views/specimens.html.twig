@@ -12,10 +12,9 @@
 
     </p>
 
-
     <section id="thumbnails">
         <ul class="thumbnails">
-        {% for manatee in manatees %}
+        {% for manatee in realManatees %}
             <li class="span4">
                 <div class="thumbnail">
                     <img src="/{{ loop.index }}/360/270.jpg" />
@@ -28,4 +27,29 @@
         </ul>
     </section>
 
+
+    <h3>Vector art specimens</h3>
+
+    <p>
+        These are our vector art manatees. Aren't they uhh.. nice?
+    </p>
+
+    <p>
+
+    </p>
+
+    <section id="thumbnails">
+        <ul class="thumbnails">
+            {% for manatee in svgManatees %}
+                <li class="span4">
+                    <div class="thumbnail">
+                        <img src="/{{ loop.index }}/360/270.svg" />
+                        <div class="caption">
+                            Specimen #{{ loop.index }}
+                        </div>
+                    </div>
+                </li>
+            {% endfor %}
+        </ul>
+    </section>
 {% endblock %}
