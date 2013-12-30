@@ -98,7 +98,6 @@ class ManatizerService
     {
         $path = $this->getPath($request);
         file_put_contents($path . '/' . $request->getHeight() .'.'.$request->getFormat(), $imgString);
-
     }
 
 
