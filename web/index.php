@@ -9,13 +9,11 @@ use Trichechus\Manatus\ManateeRequest;
 use Trichechus\Manatus\ManateeApplication;
 
 $app = new ManateeApplication();
-$app['debug'] = true;
+$app['debug'] = false;
 
 $app->register(new Silex\Provider\TwigServiceProvider(), array(
     'twig.path' => realpath(__DIR__ . '/../views')
 ));
-
-
 
 $app['manatizer'] = $app->share(function (Application $app) {
     return new ManatizerService(realpath(__DIR__ . '/../manatees'), __DIR__);
@@ -125,10 +123,6 @@ $app->get('/{specificManatee}/{width}/{height}.{format}', function (Application 
 
 $app->error(function (Exception $e, $code) use ($app) {
 
-    if ($app['debug']) {
-        return false;
-    }
-
     switch ($code) {
         case 404:
             $message = 'Page not found';
@@ -137,7 +131,7 @@ $app->error(function (Exception $e, $code) use ($app) {
             $message = $e->getMessage();
     }
 
-    $response = $app->render('error.html.twig', ['message' => $message, 'code' => $code]);
+    $response = $app->render('error.html.twig', ['message' => $message, 'code' => $code, 'debug' => $app['debug']]);
     return $response;
 });
 
@@ -152,3 +146,4 @@ function getMime($format) {
     ];
     return $mimes[$format];
 }
+

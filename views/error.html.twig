@@ -4,11 +4,25 @@
 
     <section class="row">
 
-        <div class="span12">
+        <div class="span12" style="text-align: center">
+            {% if (code == 404) %}
+                <img src="14/400/300.svg"/>
+                <h2>404 Page not found</h2>
 
-            <strong>Error:</strong> {{ message }}
+            {%  elseif (code == 500) %}
+                <img src="500.svg" width="300"/>
+                <h2>500 Internal server error</h2>
+            {%  else %}
+                <h2>Server returned an error with errorcode {{ code }}</h2>
+            {% endif %}
 
+            {%  if (debug == true) %}
+                <hr/>
+                <h2>Debug:</h2>
+                <strong>Error:</strong> {{ message }}
+            {%  endif %}
         </div>
+
 
     </section>
 
